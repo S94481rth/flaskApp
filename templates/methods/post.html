@@ -1,0 +1,19 @@
+
+{%extends "layout.html"%}
+{%block body%}
+
+
+    <div class="login-container">
+        <h3>Add Todo</h3>
+        <form action="/methods/post" method="post">
+            Enter Task<input type="text" name="task">
+            Enter priority<input type="text" name="priority">
+            <input type="submit" placeholder="Add">
+        </form>
+        {%if added : %}
+            <h4>Task Added</h4>
+        {%endif%}    
+        <br>
+        <a href="/methods/get">Your Todo</a>
+    </div>
+{%endblock%}

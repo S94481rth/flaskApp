@@ -1,0 +1,30 @@
+{%extends "layout.html"%}
+{%block body%}
+<div class="login-container">
+  <h1>Current List of Todos</h1>
+
+  
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">task no</th>
+        <th scope="col">task</th>
+        <th scope="col">priority</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for task in todos:%}
+      <tr>
+        <td>{{task.taskid}}</td>
+        <td>{{task.task}}</td>
+        <td>{{task.priority}}</td>
+        <td><a href="/methods/delete/{{task.taskid}}" name="{{task.taskid}}" >delete</a></td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+
+  <br>
+  <a href="/">Welcome Page</a>
+</div>
+{%endblock%}

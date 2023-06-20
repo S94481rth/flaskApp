@@ -1,0 +1,18 @@
+# created by virtualenv automatically
+
+/env/Scripts
+
+# Ignore virtual environment
+venv/
+env/
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore local development configuration
+instance/
+
+# Ignore package dependencies
+lib/
+
